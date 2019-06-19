@@ -6,7 +6,7 @@ body {
     position: relative;
     /* width: 1920px; */
     /* min-width: 800px; */
-    height: 400px;
+    height: 25em;
     overflow: hidden;
 }
 
@@ -21,15 +21,15 @@ body {
     float: left;
     background-color: blanchedalmond;
     /* width: 1920px; */
-    height:100vw; 
-    height: 400px;
-    line-height: 400px;
+    /* height:100vw;  */
+    height: 25em;
+    line-height: 25em;
     text-align: center;
     /* overflow: hidden; */
 }
 .side img{
     width: 100vw;
-    height: 400px; 
+    height: 25em; 
     /* 设置图片居中剪切 */
     object-fit: cover;  
 }
@@ -45,48 +45,33 @@ body {
     /* line-height: normal; */
 /* } */ 
 
-#previous{
+#previous,#next{
     display: block;
     text-align: center;
     /* vertical-align: middle; */
-    width: 30px;
-    height: 60px;
+    width: 1.5em;
+    height: 3em;
     border-radius:10px;
     opacity: 0.8;
-    /* line-height: 30px; */
-    font-size: 40px;
+    line-height: 3em;
+    font-size: 2em;
     user-select: none;
     position: absolute;
-    left: 10px;
     top:50%;
     transform:translate(0,-50%);
     background-color: silver;  
 }
-#previous:hover{
+#previous{
+    left: 10px;
+}
+#next{
+    right: 10px;
+}
+#previous:hover,#next:hover{
     background-color: slategray; 
     cursor: pointer;   
 }
-#next{
-    display: block;
-    text-align: center;
-    width: 30px;
-    height: 60px;
-    border-radius:10px;
-    opacity: 0.8;
-    /* line-height: 30px; */
-    font-size: 40px;
-    user-select: none;
-    position: absolute;
-    right: 10px;
-    top:50%;
-    transform:translate(0,-50%);
-    background-color: silver;
-}
 
-#next:hover{
-    background-color: slategray;
-    cursor: pointer;    
-}
 
 .selectorList{
     user-select: none;
@@ -104,9 +89,9 @@ body {
     display: block;
     text-align: center;
     margin-left:10px; 
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
     background-color: slategray;
     /* color: red; */
     border-radius: 50%;
