@@ -1,4 +1,43 @@
-<h1>Hello,Mars</h1>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/220px-OSIRIS_Mars_true_color.jpg" alt="Mars">
-<br>
-<img src="images/Curiosity-Rover-Portrait-Mars-Mojave-Selfie-pia19142-MALHI-fi.jpg" alt="Mars Car">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>原生Javascript实现轮播图</title>
+    <style>
+
+    </style>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+        <!-- ondragstart设置了禁止拖拽图片 -->
+        <div class="container" ondragstart="return false;">
+            <div class="side">
+                <!-- <span>1:我的父亲<br>去<br>佳佳乐超市<br>买白砂糖</span> -->
+                <img src="images/1.jpg" alt="1">
+            </div>
+            <div class="side">
+                <!-- <span>2:我的母亲</span> -->
+                <img src="images/2.jpg" alt="2">
+            </div>
+            <div class="side">
+                <!-- <span>3:我的孩子还没出生<br>TA的妈妈还没出现</span> -->
+                <img src="images/3.jpg" alt="3">
+            </div>
+            <div class="side">
+                <!-- <span>4:我的家乡</span> -->
+                <img src="images/4.jpg" alt="4">
+            </div>
+        </div>
+        <span class="previous" id="previous">&lt</span>
+        <span class="next" id="next">&gt</span>
+        <div class="selectorList">
+        </div>
+    </div>
+
+</body>
+
+</html>

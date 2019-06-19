@@ -1,0 +1,129 @@
+body {
+    margin: 0px;
+}
+
+.banner {
+    position: relative;
+    /* width: 1920px; */
+    /* min-width: 800px; */
+    height: 400px;
+    overflow: hidden;
+}
+
+.container {
+    width: 19200px;
+    /* 过渡动画 */
+    /* width: auto; */
+    transition: margin-left 1.0s;
+}
+
+.side {
+    float: left;
+    background-color: blanchedalmond;
+    /* width: 1920px; */
+    height:100vw; 
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    /* overflow: hidden; */
+}
+.side img{
+    width: 100vw;
+    height: 400px; 
+    /* 设置图片居中剪切 */
+    object-fit: cover;  
+}
+
+/* .side span {
+    user-select: none;
+    color: brown;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    /* 文本垂直居中 */
+    /* vertical-align: middle; */
+    /* line-height: normal; */
+/* } */ 
+
+#previous{
+    display: block;
+    text-align: center;
+    /* vertical-align: middle; */
+    width: 30px;
+    height: 60px;
+    border-radius:10px;
+    opacity: 0.8;
+    /* line-height: 30px; */
+    font-size: 40px;
+    user-select: none;
+    position: absolute;
+    left: 10px;
+    top:50%;
+    transform:translate(0,-50%);
+    background-color: silver;  
+}
+#previous:hover{
+    background-color: slategray; 
+    cursor: pointer;   
+}
+#next{
+    display: block;
+    text-align: center;
+    width: 30px;
+    height: 60px;
+    border-radius:10px;
+    opacity: 0.8;
+    /* line-height: 30px; */
+    font-size: 40px;
+    user-select: none;
+    position: absolute;
+    right: 10px;
+    top:50%;
+    transform:translate(0,-50%);
+    background-color: silver;
+}
+
+#next:hover{
+    background-color: slategray;
+    cursor: pointer;    
+}
+
+.selectorList{
+    user-select: none;
+    position: absolute; 
+    left: 50%; 
+    bottom: 20px;
+    /* 反向平移:距离为当前元素的宽度的一半 */
+    transform: translate(-50%, 0);     
+}
+
+
+
+.selectorList .selector{
+    float: left;
+    display: block;
+    text-align: center;
+    margin-left:10px; 
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: slategray;
+    /* color: red; */
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+
+
+.selectorList .selector:hover{
+    background-color: silver;
+    cursor: pointer;
+}
+
+/* 将selected的样式放在最后以提供最高的优先级 */
+.selectorList .selected{
+    background-color: greenyellow;
+}
+.selectorList .selected:hover{
+    background-color: greenyellow;
+}
