@@ -100,15 +100,18 @@ body {
 
 
 
-.selectorList .selector:hover{
-    background-color: silver;
-    cursor: pointer;
+@media screen and (min-width:768px){
+    .selectorList .selector:hover{
+        background-color: silver;
+        cursor: pointer;
+    }
 }
 
 /* 将selected的样式放在最后以提供最高的优先级 */
 .selectorList .selected{
     background-color: greenyellow;
 }
+/* 使被选择的选择器的hover时颜色相同 */
 .selectorList .selected:hover{
     background-color: greenyellow;
 }
