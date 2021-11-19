@@ -4,16 +4,34 @@
         <meta charset="utf-8">
         <title>今天你应该复习的内容的学习时间</title>
         <script>
-            window.onload()=function(){
-                alert("1")
+            window.onload=function(){
+                let review_dates=dates=get_review_time()
+                
+                review_dates.forEach(function(item){
+                    const newLi = document.createElement("li")
+                    const newContent = document.createTextNode(item);
+                    newLi.appendChild(newContent)
+
+                    const ul = document.getElementById("dates")
+                    ul.appendChild(newLi)
+                })
+                
+
+            }
+
+            function get_review_time(){
+                let dates=[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
+                let t = new Date()
+                dates.forEach(function(item,index,array){
+                    t.setDate(t.getDate()-item)
+                    array[index]=t.toISOString().slice(0, 10)
+                })
+                return dates
             }
         </script>
     </head>
     <body>
-        <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
+        <ul id="dates">
         </ul>
     </body>
 </html>
