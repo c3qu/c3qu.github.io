@@ -44,8 +44,8 @@
 
             function get_review_time(){
                 let dates=[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
-                let t = new Date()
                 dates.forEach(function(item,index,array){
+                    let t = new Date()
                     t.setDate(t.getDate()-item)
                     array[index]=t.toISOString().slice(0, 10)
                 })
