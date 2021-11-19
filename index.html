@@ -4,8 +4,25 @@
         <meta charset="utf-8">
         <title>今天你应该复习的内容的学习时间</title>
         <style>
-            li{
-                font-size: xx-large;
+            body{
+                background-color: cadetblue;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;     /* 垂直居中 */
+ 
+            }
+            ul{
+                list-style-type: none;
+            }
+            #name{
+                font-size: 60px;
+                font-weight:bold;
+                color:blueviolet;
+            }
+            li {
+                color: darkblue;
+                font-size: 50px;
             }
         </style>
         <script>
@@ -36,6 +53,7 @@
         </script>
     </head>
     <body>
+        <div id="name">今天你应该复习的内容的学习时间</div>
         <ul id="dates">
         </ul>
     </body>
