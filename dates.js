@@ -5,7 +5,6 @@ window.onload=function(){
         const newContent = document.createTextNode(item)
         newLi.style.color=randomColor()
         newLi.onclick=function(e){
-            // e.currentTarget.style.textDecoration="line-through"
             textDecoration=e.currentTarget.style.textDecoration
             e.currentTarget.style.textDecoration=textDecoration=="line-through"?"None":"line-through"
             playSound()
@@ -13,6 +12,13 @@ window.onload=function(){
         newLi.appendChild(newContent)
         const ul = document.getElementById("dates")
         ul.appendChild(newLi)
+
+
+        const name=document.getElementById("name")
+        name.onclick=function(e){
+            // alert(1)
+            e.currentTarget.style.color=randomColor()
+        }
     })
 }
 
