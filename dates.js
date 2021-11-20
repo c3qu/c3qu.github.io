@@ -8,6 +8,7 @@ window.onload=function(){
             // e.currentTarget.style.textDecoration="line-through"
             textDecoration=e.currentTarget.style.textDecoration
             e.currentTarget.style.textDecoration=textDecoration=="line-through"?"None":"line-through"
+            playSound()
         }
         newLi.appendChild(newContent)
         const ul = document.getElementById("dates")
@@ -40,4 +41,9 @@ function randomColor(){
     let g = Math.floor(Math.random()*255)
     let b = Math.floor(Math.random()*255)
     return color = 'rgba('+ r +','+g+','+b+',1)'
-  }
+}
+
+function playSound() {
+    let sound = document.getElementById("audio");
+    sound.play();
+}
