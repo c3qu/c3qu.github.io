@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>今天你应该复习的内容的学习时间</title>
+        <title>今天的复习内容</title>
         <style>
             body{
-                background-color: cadetblue;
+                background-color: #272727;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -13,48 +13,31 @@
  
             }
             ul{
-                width: 20rem;
+                width: 100%;
                 list-style-type: none;
             }
             #name{
-                font-size: 3rem;
+                cursor: pointer;
+                width: 100%;
+                text-align: center;
+                font-size: 6rem;
                 font-weight:bold;
                 color:blueviolet;
             }
             li {
-                color: darkblue;
-                font-size: 3rem;
+                user-select:none;
+                font-weight: bolder;
+                cursor:pointer;
+                text-align: center;
+                width: 100%;
+                color: #8ab4ff;
+                font-size: 5rem;
             }
         </style>
-        <script>
-            window.onload=function(){
-                let review_dates=dates=get_review_time()
-                
-                review_dates.forEach(function(item){
-                    const newLi = document.createElement("li")
-                    const newContent = document.createTextNode(item);
-                    newLi.appendChild(newContent)
-
-                    const ul = document.getElementById("dates")
-                    ul.appendChild(newLi)
-                })
-                
-
-            }
-
-            function get_review_time(){
-                let dates=[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
-                dates.forEach(function(item,index,array){
-                    let t = new Date()
-                    t.setDate(t.getDate()-item)
-                    array[index]=t.toISOString().slice(0, 10)
-                })
-                return dates
-            }
-        </script>
+        <script type="text/javascript" src="dates.js"></script>
     </head>
     <body>
-        <div id="name">今天你应该复习的内容的学习时间</div>
+        <div id="name">今天的复习内容</div>
         <ul id="dates">
         </ul>
     </body>
